@@ -33,7 +33,7 @@ function Experience({}: Props) {
     
   return (
     <>
-    <section className='mt-10 flex flex-col gap-10'>
+    <section id='experience' className='mt-10 flex flex-col gap-10'>
         <h1 className='headerText'>Experience</h1>
         <div className='flex flex-col   bg-[#23252d48]'>
           

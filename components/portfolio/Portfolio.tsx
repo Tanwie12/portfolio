@@ -51,7 +51,7 @@ const Portfolio: React.FC<Props> = () => {
   ];
 
   return (
-    <div className='mt-8 gap-3 flex items-center flex-col'>
+    <div id='portfolio' className=' mt-8 gap-3 flex items-center flex-col'>
       <h2 className='headerText'>Portfolio</h2>
       <div className='grid  md:grid-cols-3 my-3 gap-4 p-4 '>
         {portfolio.map((item, index) => (

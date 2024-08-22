@@ -1,6 +1,8 @@
 import React from 'react'
 import { BiHome, BiMessage, BiUser } from 'react-icons/bi';
 import { FloatingNav } from './ui/floating-navbar';
+import { MdOutlineLabel, MdTimeline } from 'react-icons/md';
+import { PiBookLight } from 'react-icons/pi';
 
 type Props = {}
 
@@ -12,15 +14,15 @@ function Navbar({}: Props) {
       icon: <BiHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "About",
-      link: "/about",
-      icon: <BiUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      name: "Portfolio",
+      link: "#porfolio",
+      icon: <PiBookLight className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Contact",
-      link: "/contact",
+      name: "Experience",
+      link: "#experience",
       icon: (
-        <BiMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <MdTimeline className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
   ];

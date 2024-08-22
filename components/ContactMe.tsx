@@ -22,7 +22,7 @@ function Line({ children }: LineProps) {
 
 function ContactMe({}: Props) {
   return (
-    <section className='grid grid-cols-1 p-8 mt-10'>
+    <section id='contact' className='grid grid-cols-1 p-8 mt-10'>
       {/* large screens div */}
       <div className=''>
       <Line>ContactMe</Line>
