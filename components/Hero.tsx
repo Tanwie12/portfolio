@@ -2,15 +2,39 @@ import { Button } from '@nextui-org/react';
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+import { TypewriterEffect } from './ui/typewriter-effect';
 
 const HeroSection = () => {
+  const words = [
+    {
+      text: "Web",
+    },
+    
+    {
+      text: "and",
+    },
+    {
+      text: "Mobile",
+    },
+    {
+      text: "App",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "Developer",
+      className: "text-blue-500 dark:text-yellow-500",
+    },
+    
+  ];
   return (
     <section className="flex   mt-10 flex-col w-full md:flex-row h-auto max-md:gap-7 justify-between  md:h-[38rem]  dark:text-white">
         <div className=' '>
         <h1 className="text-4xl font-bold mb-4">
           {"I'M"} <span className="text-custom-yellow">Tanwie Bruno</span>
         </h1>
-        <p className="text-lg mb-6">web developer and mobile app developer</p>
+       
+          <TypewriterEffect words={words} className='bodyText mb-6'/>
+          
         <Button radius='sm' variant='bordered' className=' text-custom-yellow bodyText border-custom-yellow'>
           Contact Me
         </Button>

@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <main className="flex min-h-screen scroll-smooth flex-col justify-center relative md:p-24 p-8 md:pt-32">
-<div className="glow absolute -top-20 -left-20"></div>
+<div className="glow absolute  max-md:hidden -top-20 size-2 -left-20"></div>
 
 
         <Navbar/>

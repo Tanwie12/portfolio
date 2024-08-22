@@ -43,11 +43,12 @@ function ContactMe({}: Props) {
           <span className='hidden max-md:block'>OR</span>
         </div>
         <div className='flex flex-col mt-5 md:gap-20 gap-10'>
-          <Button startContent={<MdEmail className='w-8 h-8' />} className='inline-flex h-12 box4 items-center justify-around text-xl   rounded-md bg-[#34353A] drop-shadow-md text-custom-yellow px-6 font-medium transition-colors focus:outline-none'>
-            adeytanwie@gmail.com
+          <Button startContent={<MdEmail className='w-8 h-8 max-md:w-5 max-md:h-5' />} className='inline-flex h-12 box4 items-center md:justify-around md:text-xl   rounded-md bg-[#34353A] drop-shadow-md text-custom-yellow md:px-6 md:font-medium transition-colors focus:outline-none'>
+          <span className=' md:hidden'>Email Me</span>
+          <span className='hidden md:block'>adeytanwie@gmail.com</span>
           </Button>
-          <Button startContent={<BsWhatsapp className='w-8 h-8' />} className='bg-[#34353A] h-12 inline-flex items-center text-xl justify-around rounded-md box4 drop-shadow-md text-custom-yellow px-6 transition-colors focus:outline-none'>
-            whatsapp: +237650891839
+          <Button startContent={<BsWhatsapp className='w-8 h-8 hidden md:block' />}  className='bg-[#34353A] h-12  inline-flex items-center md:text-xl md:justify-around  rounded-md box4 drop-shadow-md text-custom-yellow md:px-6 transition-colors focus:outline-none'>
+          +237650891839
           </Button>
         </div>
       </div>
