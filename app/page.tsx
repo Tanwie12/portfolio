@@ -8,7 +8,9 @@ import Testimonials from "@/components/testimonial/Testimonials";
 import ContactMe from "@/components/ContactMe";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import Bot from "@/components/Bot";
+import dynamic from 'next/dynamic';
+
+const Bot = dynamic(() => import('../components/Bot'), { ssr: false });
 import Dot from "@/components/Dot";
 
 export default function Home() {
