@@ -1,84 +1,69 @@
-import React from 'react';
-import Card from './PorfolioCard'; // Make sure the path is correct
+'use client';
+import { projectsSection } from '@/lib/content/projects';
+import { PROJECTS_INITIALLY } from '@/lib/utils/config';
+import { sortByYear } from '@/lib/utils/helper';
+
+import   ProjectCard from '@/components/ui/ProjectCard';
+
+import { getSectionAnimation, projectVariants } from '@/styles/animations';
+
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import Wrapper from '../ui/Wrapper';
 import { Button } from '@nextui-org/react';
 
-type Props = {}
+const Projects = () => {
+  const { projects, title } = projectsSection;
+  const [showMore, setShowMore] = useState(false);
+  const topProjects = projects.slice(0, PROJECTS_INITIALLY);
 
-const Portfolio: React.FC<Props> = () => {
-  const portfolio = [
-    { 
-      title: 'Python', 
-      imageSrc: 'https://images04.nicepage.com/feature/612016/ecommerce-websites.jpg',
-      description: 'Python project description',
-      demoLink: 'https://demo-link.com',
-      githubLink: 'https://github.com/repo'
-    },
-    { 
-      title: 'ReactJS', 
-      imageSrc: 'next.svg',
-      description: 'ReactJS project description',
-      demoLink: 'https://demo-link.com',
-      githubLink: 'https://github.com/repo'
-    },
-    { 
-      title: 'NodeJS', 
-      imageSrc: 'vercel.svg',
-      description: 'NodeJS project description',
-      demoLink: 'https://demo-link.com',
-      githubLink: 'https://github.com/repo'
-    },
-    { 
-      title: 'NextJS', 
-      imageSrc: '/gg.png',
-      description: 'NextJS project description',
-      demoLink: 'https://demo-link.com',
-      githubLink: 'https://github.com/repo'
-    },
-    { 
-      title: 'NextJS', 
-      imageSrc: '/gg.png',
-      description: 'NextJS project description',
-      demoLink: 'https://demo-link.com',
-      githubLink: 'https://github.com/repo'
-    },
-    { 
-      title: 'NextJS', 
-      imageSrc: '/gg.png',
-      description: 'NextJS project description',
-      demoLink: 'https://demo-link.com',
-      githubLink: 'https://github.com/repo'
-    },
-  ];
+  const visibleProjects = showMore ? projects : topProjects;
 
   return (
-    <div id='portfolio' className=' mt-8 gap-3 flex items-center flex-col'>
-      <h2 className='headerText'>Portfolio</h2>
-      <div className='grid  md:grid-cols-3 my-3 gap-4 p-4 '>
-        {portfolio.map((item, index) => (
-          <Card 
-            key={index}
-            imageSrc={item.imageSrc}
-            title={item.title} 
-            description={item.description}
-            demoLink={item.demoLink}
-            githubLink={item.githubLink}
-            isHighlighted={index === 1}
-          />
-        ))}
-      </div>
-      <div>
-        <Button 
-          type='button' 
-          size='lg' 
-          variant='bordered' 
-          radius='sm'  
-          className='bg-custom-yellow border-none p-2'
-        >
-          <span className='text-black text-xl'>View more</span>
-        </Button>
-      </div>
-    </div>
-  );
-}
+    <Wrapper animate={false} {...getSectionAnimation}>
+      <motion.h2 className="heading-secondary text-center !mb-12">
+        {title}
+      </motion.h2>
+      <div className="grid gap-6 grid-cols-3 place-items-center">
+        {sortByYear(visibleProjects).map((project, i) => {
+          if (i < PROJECTS_INITIALLY) {
+            return (
+              <ProjectCard
+                {...project}
+                key={project.id}
+                variants={projectVariants}
+                initial="hidden"
+                whileInView="show"
+                custom={i}
+                viewport={{ once: true }}
+              />
+            );
+          }
 
-export default Portfolio;
+          return (
+            <ProjectCard
+              {...project}
+              key={project.id}
+              variants={projectVariants}
+              initial="hidden"
+              animate="show"
+              custom={i - PROJECTS_INITIALLY}
+            />
+          );
+        })}
+      </div>
+      {projects.length > PROJECTS_INITIALLY && (
+        <Button
+          size="lg"
+          className="!mt-20"
+          
+          onClick={() => setShowMore((prev) => !prev)}
+        >
+          {showMore ? 'show less' : 'show more'}
+        </Button>
+      )}
+    </Wrapper>
+  );
+};
+
+export default Projects;
