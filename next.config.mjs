@@ -18,6 +18,12 @@ const nextConfig = {
           },
           {
             protocol: 'https',
+        hostname: 'assets.aceternity.com',
+        port: '',
+        
+          },
+          {
+            protocol: 'https',
         hostname: 'cdn.builder.io',
         port: '',
         

@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Skills from "@/components/Skills/Skills";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Experience from "@/components/experience/Experience";
+import ExperiencePro from "@/components/experience/ExperiencePro";
 import Testimonials from "@/components/testimonial/Testimonials";
 import ContactMe from "@/components/ContactMe";
 import Footer from "@/components/Footer";
@@ -29,7 +30,8 @@ export default function Home() {
         <About />
         <Skills />
         <Portfolio />
-        <Experience />
+        {/* <Experience /> */}
+        <ExperiencePro/>
         <Testimonials />
         <ContactMe />
         <Footer />
