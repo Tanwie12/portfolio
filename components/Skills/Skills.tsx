@@ -1,35 +1,35 @@
-import React from 'react'
-import Card from '../Card'
-import SkillCard from './SkillCard';
+'use client';
+import { skillsSection } from '@/lib/content/skills';
+import { useTheme } from '@/lib/hooks/use-theme';
 
-type Props = {}
 
-function Skills({}: Props) {
-  const skills = [
-    { name: 'Python', icon: 'https://img.icons8.com/color/48/000000/python.png' },
-    { name: 'ReactJS', icon: 'https://img.icons8.com/color/48/000000/react-native.png' },
-    { name: 'NodeJS', icon: 'https://img.icons8.com/color/48/000000/nodejs.png' },
-    { name: 'NextJS', icon: 'https://img.icons8.com/color/48/000000/nextjs.png' },
-    { name: 'Tailwind CSS', icon: 'https://img.icons8.com/color/48/000000/tailwindcss.png' },
-    { name: 'MongoDB', icon: 'https://img.icons8.com/color/48/000000/mongodb.png' },
-    { name: 'Figma', icon: 'https://img.icons8.com/color/48/000000/figma.png' },
-    { name: 'MongoDB', icon: 'https://img.icons8.com/color/48/000000/mongodb.png' },
-    { name: 'Figma', icon: 'https://img.icons8.com/color/48/000000/figma.png' },
-    { name: 'MongoDB', icon: 'https://img.icons8.com/color/48/000000/mongodb.png' },
-    { name: 'Figma', icon: 'https://img.icons8.com/color/48/000000/figma.png' },
-  ];
+import { getSectionAnimation } from '@/styles/animations';
+import {Skill} from './Skill';
+import Wrapper from '../ui/Wrapper';
+
+const Skills = () => {
+  const { title, skills } = skillsSection;
+  const { isDarkMode } = useTheme();
+
   return (
-    <div className="min-h-screen flex flex-col items-center py-10">
-    <h1 className="headerText text-white mb-10">My Skills</h1>
-    <div className="grid grid-cols-2 grid-flow-row-dense md:grid-cols-4 gap-6">
-      {skills.map((skill,i) => (
-        <div key={i} className={`${i==3?'':''}`}>
-        <SkillCard key={skill.name} name={skill.name} image={skill.icon}  />
-        </div>
-      ))}
-    </div>
-  </div>
-  )
-}
+    <Wrapper id="skills" {...getSectionAnimation}>
+      <h2 className="text-center heading-secondary">{title}</h2>
 
-export default Skills
+      <div className="space-y-32">
+        {skills.map(({ id, lottie, softwareSkills, points, title }) => (
+          <Skill
+            key={id}
+            className="odd:lg:flex-row-reverse"
+            lottie={lottie[isDarkMode ? 'dark' : 'light']}
+            skills={softwareSkills}
+            points={points}
+            title={title}
+            {...getSectionAnimation}
+          />
+        ))}
+      </div>
+    </Wrapper>
+  );
+};
+
+export default Skills;

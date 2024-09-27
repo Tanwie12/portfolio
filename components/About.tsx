@@ -1,29 +1,78 @@
-import React from 'react'
+'use client';
+import { aboutSection } from '@/lib/content/about';
+import { author } from '@/lib/content/portfolio';
+import { getId } from '@/lib/utils/helper';
 
-type Props = {}
 
-function About({}: Props) {
-  return (
-    <div className='grid grid-cols-2  w-full items-center max-md:mt-10 md:p-8'>
-        <hr className='w-10 h-1 bg-yellow-400'  />
-        <div className=''>
-            <p className=' md:bodyText font-medium dark:text-white text-base'>{"I'm"} a web developer specializing in dynamic, user-friendly websites. Proficient in HTML, CSS, JavaScript, and frameworks like React and Node.js, 
-              I build responsive, <span className='text-violet-700  dark:text-custom-yellow'>high-performance web applications</span>.
-               I focus on clean code and seamless user experiences, constantly learning to stay at the forefront of web development.</p>
+
+import { getSectionAnimation } from '@/styles/animations';
+
+import { useEffect, useState } from 'react';
+import Wrapper from './ui/Wrapper';
+import { Link } from 'lucide-react';
+import ListItem from './skills/ListItem';
+import AuthorImage from './ui/AuthorImage';
+
+const About = () => {
+  const { title, img, list } = aboutSection;
+  // To avoid hydration error
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
+
+  return domLoaded ? (
+    <Wrapper id="about" {...getSectionAnimation}>
+      <h2 className="heading-secondary">{title}</h2>
+      <main className="flex flex-col items-center gap-16 lg:items-start lg:flex-row">
+        <div className="space-y-4 lg:w-3/5">
+          <p>
+            Hi, my name is Vatsal Singh, a first-year MCA student at{' '}
+            <Link
+              href="https://bhu.ac.in/"
+              target="_blank"
+              className="text-accent"
+            >
+              Banaras Hindu University
+            </Link>
+            .<br /> I'm an Artist as well as crazy full stack web developer who
+            wants to explore every tech stack.
+          </p>
+          <p>
+            Fast-forward to today, and I've had the privilege of working at a
+            start-up -{' '}
+            <Link
+              href="https://www.pixelwand.live/"
+              target="_blank"
+              className="text-accent"
+            >
+              Pixelwand
+            </Link>
+            .
+          </p>
+          <p>
+            My main focus these days is learning mobile development and finding
+            a decent job.
+          </p>
+
+          {list && (
+            <>
+              <p>{list.title}</p>
+              <ul className="grid w-2/3 grid-cols-2 gap-1 text-sm">
+                {list.items.map((item) => (
+                  <ListItem key={getId()}>{item}</ListItem>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
+        <AuthorImage src={img} alt={author.name} />
+      </main>
+    </Wrapper>
+  ) : (
+    <></>
+  );
+};
 
-    </div>
-
-// {/* <div className='gap-2 grid grid-cols-2 max-md:grid-cols-1 w-full items-center'>
-//    <hr className=' h-1 hidden md:block bg-yellow-400' />
-//    <div className=''>
-//           <p className=' md:bodyText font-medium dark:text-white text-base'>{"I'm"} a web developer specializing in dynamic, user-friendly websites. Proficient in HTML, CSS, JavaScript, and frameworks like React and Node.js, 
-//            I build responsive, <span className='text-violet-700  dark:text-custom-yellow'>high-performance web applications</span>.
-//               I focus on clean code and seamless user experiences, constantly learning to stay at the forefront of web development.</p>
-//        </div>
-  
-//   </div> */}
-  )
-}
-
-export default About
+export default About;

@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/Hero";
 import About from "@/components/About";
-import Skills from "@/components/Skills/Skills";
+
 import Portfolio from "@/components/portfolio/Portfolio";
 import Experience from "@/components/experience/Experience";
 import ExperiencePro from "@/components/experience/ExperiencePro";
@@ -10,9 +10,9 @@ import ContactMe from "@/components/ContactMe";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import dynamic from 'next/dynamic';
+import Skills from "@/components/skills/Skills";
 
 const Bot = dynamic(() => import('../components/Bot'), { ssr: false });
-import Dot from "@/components/Dot";
 
 export default function Home() {
   return (
@@ -28,7 +28,9 @@ export default function Home() {
         <Navbar />
         <HeroSection />
         <About />
-        <Skills />
+        <Skills/>
+
+        
         <Portfolio />
         {/* <Experience /> */}
         <ExperiencePro/>
