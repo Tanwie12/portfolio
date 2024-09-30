@@ -9,7 +9,7 @@ import { getSectionAnimation } from '@/styles/animations';
 
 import { useEffect, useState } from 'react';
 import Wrapper from './ui/Wrapper';
-import { Link } from 'lucide-react';
+
 import ListItem from './skills/ListItem';
 import AuthorImage from './ui/AuthorImage';
 

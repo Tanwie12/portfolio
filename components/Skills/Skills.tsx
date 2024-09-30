@@ -4,10 +4,10 @@ import { useTheme } from '@/lib/hooks/use-theme';
 
 
 import { getSectionAnimation } from '@/styles/animations';
-import {Skill} from './Skill';
+import Skill from './Skill';
 import Wrapper from '../ui/Wrapper';
 
-const Skills = () => {
+function Skills(){
   const { title, skills } = skillsSection;
   const { isDarkMode } = useTheme();
 

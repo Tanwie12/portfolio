@@ -17,7 +17,7 @@ type Props = {
   className?: string;
 } & MotionProps;
 
-export function Skill({lottie,
+function Skill({lottie,
   title,
   skills,
   points,
@@ -54,4 +54,4 @@ export function Skill({lottie,
   );
 };
 
-
+export default Skill
