@@ -20,7 +20,7 @@ export const author = {
 };
 
 export const seoData = {
-  title: 'Tanwie Bruno | Front-End Developer',
+  title: 'Tanwie Bruno Adey | Front-End Developer',
   description:
     'Tanwie Bruno is a front-end developer who specializes in building (and occasionally designing) exceptional visual interfaces.',
   author: author.name,
