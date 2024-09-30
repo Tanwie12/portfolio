@@ -3,12 +3,12 @@ import HeroSection from "@/components/Hero";
 import About from "@/components/About";
 
 import Portfolio from "@/components/portfolio/Portfolio";
-import Experience from "@/components/experience/Experience";
+
 import ExperiencePro from "@/components/experience/ExperiencePro";
 import Testimonials from "@/components/testimonial/Testimonials";
 import ContactMe from "@/components/ContactMe";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+
 import dynamic from 'next/dynamic';
 import Skills from "@/components/skills/Skills";
 

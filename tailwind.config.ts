@@ -19,86 +19,40 @@ const config = {
         "2xl": "1400px",
       },
     },
+     theme: {
     extend: {
-      colors: {
-        "custom-yellow": "#FECD7A",
-
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
       fontFamily: {
-        sans: ["Roboto"],
+        signature: ['agustina', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        mono: ['Roboto Mono', 'monospace'],
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      screens: {
+        xs: '375px',
       },
-      keyframes: {
-        spinInVoid: {
-          '0%': { transform: 'rotateX(0deg) rotateY(0deg)' },
-          '100%': { transform: 'rotateX(360deg) rotateY(360deg)' },
-        },
-        colorChange: {
-          '0%': { backgroundColor: '#fbbf24' },
-          '25%': { backgroundColor: '#fb923c' },
-          '50%': { backgroundColor: '#f87171' },
-          '75%': { backgroundColor: '#34d399' },
-          '100%': { backgroundColor: '#fbbf24' },
-        },
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+      colors: {
+        customYellow:'',
+        bg: 'var(--color-bg)',
+        'bg-secondary': 'var(--color-bg-secondary)',
+        accent: 'var(--color-accent)',
+        'accent-light': 'var(--color-accent-light)',
+        text: 'var(--color-text)',
+        'dark-1': 'var(--color-dark-1)',
+        'dark-2': 'var(--color-dark-2)',
+        'dark-3': 'var(--color-dark-3)',
       },
-      animation: {
-        spinInVoid: 'spinInVoid 5s linear infinite',
-        colorChange: 'colorChange 6s ease-in-out infinite',
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        
+      transitionTimingFunction: {
+        'in-scroll': 'cubic-bezier(0.645, 0.045, 0.355, 1)',
       },
-       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      gridTemplateColumns: {
+        'auto-300': 'repeat(auto-fill, minmax(300px, 1fr))',
+        'auto-250': 'repeat(auto-fill, minmax(250px, 1fr))',
+      },
+      backgroundImage: {
+        torch:
+          'radial-gradient(525px at 50% 50%, var(--color-accent-torch), transparent 80%)',
       },
     },
+  },
   },
   plugins: [require("tailwindcss-animate"),nextui()],
 } satisfies Config

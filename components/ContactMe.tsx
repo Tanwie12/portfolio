@@ -38,7 +38,7 @@ function ContactMe({}: Props) {
             radius='sm'  
             className='bg-custom-yellow  dark:text-white border-none w-10 p-2'
           >
-            <span className='text-black dark:text-gray-800 text-xl'>Send</span>
+            <span className='text-black dark:text-white text-xl'>Send</span>
           </Button>
           <span className='hidden max-md:block'>OR</span>
         </div>

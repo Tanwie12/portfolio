@@ -125,3 +125,13 @@ body {
 .box4{
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+/* TYPOGRAPHY */
+
+.heading-secondary,
+.h2 {
+  @apply text-3xl sm:text-4xl capitalize font-medium mb-8 sm:mb-12 ;
+}
+.heading-tertiary,
+.h3 {
+  @apply text-xl sm:text-2xl tracking-wide capitalize font-medium ;
+}
