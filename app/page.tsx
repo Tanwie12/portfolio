@@ -10,7 +10,7 @@ import ContactMe from "@/components/ContactMe";
 import Footer from "@/components/Footer";
 
 import dynamic from 'next/dynamic';
-import Skills from "@/components/skills/Skills";
+import Skills from "@/components/Skills/Skills";
 
 const Bot = dynamic(() => import('../components/Bot'), { ssr: false });
 
