@@ -6,10 +6,12 @@ import Portfolio from "@/components/portfolio/Portfolio";
 
 import ExperiencePro from "@/components/experience/ExperiencePro";
 import Testimonials from "@/components/testimonial/Testimonials";
-import ContactMe from "@/components/ContactMe";
+import dynamic from 'next/dynamic';
+
+const ContactMe = dynamic(() => import('@/components/ContactMe'), { ssr: true });
 import Footer from "@/components/Footer";
 
-import dynamic from 'next/dynamic';
+
 import Skills from "@/components/Skills/Skills";
 
 const Bot = dynamic(() => import('../components/Bot'), { ssr: false });
