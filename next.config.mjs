@@ -65,6 +65,11 @@ const nextConfig = {
             hostname: 'buttons-animations-kv.vercel.app',
             pathname: '/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'app.netlify.com',
+            pathname: '/**',
+          },
           
         ],
       },

@@ -52,7 +52,7 @@ function ExperiencePro({}: Props) {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+            Participated in a code battle where we won 3rd prize, we built and launch an investor site, connecting investors to startups in 3hrs
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -92,7 +92,7 @@ function ExperiencePro({}: Props) {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+            Built an app for to finding missing items, facilitating the life and fixixng the troubles of my  local citizens 
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image

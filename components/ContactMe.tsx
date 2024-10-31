@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { Button, Input } from '@nextui-org/react';
 import { BsWhatsapp } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
+import { socialLinks } from '../lib/content/portfolio'; // Import socialLinks
 
 type Props = {};
 
@@ -121,9 +122,35 @@ function ContactMe({}: Props) {
         </div>
         
         <div className='flex flex-row max-md:mt-8 justify-center gap-4'>
-          <FaFacebook className='w-8 h-8 text-blue-600' />
-          <FaTwitter className='w-8 h-8 text-blue-400' />
-          <FaInstagram className='w-8 h-8 text-pink-600' />
+         
+          <Button 
+            variant='light' 
+            isIconOnly 
+            onClick={() => window.open(socialLinks.twitter, '_blank')}
+          >
+            <FaTwitter className='w-8 h-8 text-customYellow' />
+          </Button>
+          <Button 
+            variant='light' 
+            isIconOnly 
+            onClick={() => window.open(socialLinks.instagram, '_blank')}
+          >
+            <FaInstagram className='w-8 h-8 text-pink-600' />
+          </Button>
+          <Button 
+            variant='light' 
+            isIconOnly 
+            onClick={() => window.open(socialLinks.github, '_blank')}
+          >
+            <FaGithub className='w-8 h-8 text-black' />
+          </Button>
+          <Button 
+            variant='light' 
+            isIconOnly 
+            onClick={() => window.open(socialLinks.linkedin, '_blank')}
+          >
+            <FaLinkedin className='w-8 h-8 text-blue-700' />
+          </Button>
         </div>
       </div>
     </section>

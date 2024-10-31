@@ -7,11 +7,11 @@
 import { StringKeyValueType } from '../types';
 
 export const socialLinks: StringKeyValueType = {
-  facebook: 'https://www.facebook.com/vatsalsinghkv',
-  instagram: 'https://www.instagram.com/vatsalsinghkv',
-  twitter: 'https://twitter.com/vatsalsinghkv',
-  github: 'https://github.com/vatsalsinghkv',
-  linkedin: 'https://www.linkedin.com/in/vatsalsinghkv/',
+  facebook: 'https://www.facebook.com/',
+  instagram: 'https://www.instagram.com/',
+  twitter: 'https://twitter.com/',
+  github: 'https://github.com/Tanwie12',
+  linkedin: 'https://www.linkedin.com/in/tanwie-bruno-adey-b8a5b522b/',
 };
 
 export const author = {
@@ -31,9 +31,9 @@ export const seoData = {
     'Vatsal',
     'Tanwie Bruno',
     '@vatsalsinghkv',
-    'vatsalsinghkv',
+    '',
     'Portfolio',
-    'Vatsal Portfolio ',
+    'Bruno Portfolio ',
     'Tanwie Bruno Portfolio',
   ],
 };

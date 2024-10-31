@@ -23,9 +23,9 @@ export default function Home() {
         <div className="glow absolute max-md:hidden -top-20 size-2 -left-20"></div>
 
         {/* Position the bot to the right bottom corner */}
-        <div className="fixed  left-0 bottom-4 z-50">
+        {/* <div className="fixed  left-0 bottom-4 z-50">
           <Bot />
-        </div>
+        </div> */}
 
         <Navbar />
         <HeroSection />

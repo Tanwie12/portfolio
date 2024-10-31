@@ -30,7 +30,7 @@ const config = {
         xs: '375px',
       },
       colors: {
-        customYellow:'',
+        customYellow:'#FECD7A',
         bg: 'var(--color-bg)',
         'bg-secondary': 'var(--color-bg-secondary)',
         accent: 'var(--color-accent)',
