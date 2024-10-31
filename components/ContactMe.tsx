@@ -6,6 +6,9 @@ import { MdEmail } from 'react-icons/md';
 import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 import { socialLinks } from '../lib/content/portfolio'; // Import socialLinks
+// import { useToast } from "@/hooks/use-toast"
+ import { Button as Sbutton } from "@/components/ui/button"
+ import toast, { Toaster } from 'react-hot-toast';
 
 type Props = {};
 
@@ -24,33 +27,43 @@ function Line({ children }: LineProps) {
 }
 
 function ContactMe({}: Props) {
+  // const { toast } = useToast();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const validateEmail = (email:any) => email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
 
+  const isInvalid = React.useMemo(() => {
+    if (email === "") return false;
+
+    return validateEmail(email) ? false : true;
+  }, [email]);
+
+  const loadingToast = toast.loading('Sending message...');
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     emailjs.send(
-      'service_logddqq', // Replace with your EmailJS service ID
-      'template_wijwi3n', // Replace with your EmailJS template ID
+      'service_1fu9xif', // Replace with your EmailJS service ID
+      'template_zo10mxs', // Replace with your EmailJS template ID
       {
-        from_name: name,
-        from_email: email,
+        name: name,
+        email: email,
         message: message,
       },
-      'YOUR_USER_ID' // Replace with your EmailJS user ID
+      'EzLyRehMqd1CzThPB' // Replace with your EmailJS user ID
     )
     .then((response) => {
-      console.log('Email sent successfully:', response);
-      alert('Message sent successfully!');
+      toast.dismiss(loadingToast);
+      toast.success('Message sent successfully!');
       setName('');
       setEmail('');
       setMessage('');
     })
     .catch((error) => {
+      toast.dismiss(loadingToast);
+      toast.error('Failed to send message. Please try again.');
       console.error('Error sending email:', error);
-      alert('Failed to send message. Please try again.');
     });
   };
 
@@ -88,13 +101,26 @@ function ContactMe({}: Props) {
               type="text"
               variant='underlined'
               label="Enter your message"
+              color={isInvalid ? "danger" : "success"}
+              errorMessage="Please enter a valid email"
+        
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
+            {/* <Sbutton
+      variant="outline"
+      onClick={() => {
+        toast({
+          description: "Your message has been sent.",
+        })
+      }}
+    >
+      Show Toast
+    </Sbutton> */}
             <Button 
               type='submit' 
               size='lg' 
-              variant='bordered' 
+              variant='shadow' 
               radius='sm'  
               className='bg-custom-yellow dark:text-white border-none w-10 p-2'
             >
