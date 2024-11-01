@@ -34,8 +34,7 @@ const About = () => {
           </p>
          
           <p>
-            My main focus these days is learning mobile development and finding
-            a decent job.
+            My main focus these days is creating value with the skills i have acquired
           </p>
 
           {list && (
