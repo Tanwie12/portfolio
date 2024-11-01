@@ -6,11 +6,13 @@ import Portfolio from "@/components/portfolio/Portfolio";
 
 import ExperiencePro from "@/components/experience/ExperiencePro";
 import Testimonials from "@/components/testimonial/Testimonials";
-import ContactMe from "@/components/ContactMe";
+import dynamic from 'next/dynamic';
+
+const ContactMe = dynamic(() => import('@/components/ContactMe'), { ssr: true });
 import Footer from "@/components/Footer";
 
-import dynamic from 'next/dynamic';
-import Skills from "@/components/skills/Skills";
+
+import Skills from "@/components/Skills/Skills";
 
 const Bot = dynamic(() => import('../components/Bot'), { ssr: false });
 
@@ -21,9 +23,9 @@ export default function Home() {
         <div className="glow absolute max-md:hidden -top-20 size-2 -left-20"></div>
 
         {/* Position the bot to the right bottom corner */}
-        <div className="fixed  left-0 bottom-4 z-50">
+        {/* <div className="fixed  left-0 bottom-4 z-50">
           <Bot />
-        </div>
+        </div> */}
 
         <Navbar />
         <HeroSection />

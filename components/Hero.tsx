@@ -1,9 +1,11 @@
+'use client'
 import { Button } from '@nextui-org/react';
 import { DownloadCloudIcon, Github, Instagram, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 import { TypewriterEffect } from './ui/typewriter-effect';
 import Link from 'next/link';
+import { socialLinks } from '../lib/content/portfolio'; // Import socialLinks
 
 const HeroSection = () => {
   const words = [
@@ -28,26 +30,17 @@ const HeroSection = () => {
     
   ];
   return (
-    <section className="flex   mt-10 flex-col w-full md:flex-row h-auto max-md:gap-7 justify-between  md:h-[38rem]  dark:text-white">
-        <div className=' '>
+    <section className="flex mt-10 flex-col w-full md:flex-row h-auto max-md:gap-7 justify-between md:h-[38rem] dark:text-white">
+      <div className=''>
         <h1 className="text-4xl font-bold mb-4">
           {"I'M"} <span className="text-customYellow">Tanwie Bruno</span>
         </h1>
        
           <TypewriterEffect words={words} className='bodyText mb-6'/>
-<div className='gap-2 max-md:grid max-md:grid-cols-2 space-x-5'>
-
-         <Link  href={"#contact"} >
-        <Button radius='sm' variant='bordered' className=' text-customYellow bodyText border-customYellow'>
+          
+        <Button radius='sm' variant='bordered' className=' text-custom-yellow bodyText border-custom-yellow'>
           Contact Me
         </Button>
-
-        </Link>
-        <Button startContent={<DownloadCloudIcon size={20} className='block md:hidden' />} radius='sm' color='primary' variant='shadow' className=' text-customYellow bodyText border-customYellow'>
-         <span className='hidden md:block'>Download</span>
-         <span>CV</span>
-        </Button>
-        </div>
         </div>
         <div className='flex h-[1/2] flex-row'>
             <div>

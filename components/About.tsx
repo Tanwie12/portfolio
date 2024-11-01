@@ -10,7 +10,7 @@ import { getSectionAnimation } from '@/styles/animations';
 import { useEffect, useState } from 'react';
 import Wrapper from './ui/Wrapper';
 
-import ListItem from './skills/ListItem';
+import ListItem from './Skills/ListItem';
 import AuthorImage from './ui/AuthorImage';
 
 const About = () => {
