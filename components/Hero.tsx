@@ -45,9 +45,24 @@ const HeroSection = () => {
         </Button>
 
         </Link>
-        <Button startContent={<DownloadCloudIcon size={20} className='block md:hidden' />} radius='sm' color='primary' variant='shadow' className=' text-customYellow bodyText border-customYellow'>
-         <span className='hidden md:block'>Download</span>
-         <span>CV</span>
+        <Button 
+          startContent={<DownloadCloudIcon size={20} className='block md:hidden' />} 
+          radius='sm' 
+          color='primary' 
+          variant='shadow' 
+          className='text-customYellow bodyText border-customYellow'
+          onClick={() => {
+            // Create a link element
+            const link = document.createElement('a');
+            link.href = '/Cv.pdf'; // Replace with your CV file name
+            link.download = 'TanwieBruno-CV.pdf'; // The name that will be used when downloading
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
+        >
+          <span className='hidden md:block'>Download</span>
+          <span>CV</span>
         </Button>
         </div>
         </div>
