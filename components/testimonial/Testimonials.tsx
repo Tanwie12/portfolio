@@ -15,42 +15,41 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam minus vel itaque non quo et exercitationem! Beatae dolorum nam eum quibusdam, minus error, veritatis tempora illo consequatur repellat tempore.",
-    name: "Mr Roger",
+    text: "Working with this developer was transformative. Their expertise and innovative ideas brought my vision to life, and the final product exceeded all expectations. I highly recommend them to anyone looking for top-notch web development.",
+    name: "Mr. Roger",
     title: "CEO of Genesis",
     image: "/gg.png",
   },
   {
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam minus vel itaque non quo et exercitationem! Beatae dolorum nam eum quibusdam, minus error, veritatis tempora illo consequatur repellat tempore.",
-    name: "Ms Jane",
+    text: "The attention to detail and passion they brought to our project was inspiring. Every feature was carefully crafted, and their ability to turn complex requirements into seamless user experiences is exceptional.",
+    name: "Ms. Jane",
     title: "CTO of Tech Corp",
-    image: "/man.webp",
+    image: "",
   },
   {
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam minus vel itaque non quo et exercitationem! Beatae dolorum nam eum quibusdam, minus error, veritatis tempora illo consequatur repellat tempore.",
-    name: "Mr Roger",
+    text: "I’ve worked with several developers, but none have matched this level of dedication and skill. The quality of work is outstanding, and they truly went above and beyond to meet our deadlines.",
+    name: "Mr. Roger",
     title: "CEO of Genesis",
     image: "/gg.png",
   },
   {
-    text: "Another testimonial text here.",
-    name: "Ms Jane",
-    title: "CTO of Tech Corp",
-    image: "vercel.svg",
-  },
-  {
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam minus vel itaque non quo et exercitationem! Beatae dolorum nam eum quibusdam, minus error, veritatis tempora illo consequatur repellat tempore.",
-    name: "Mr Roger",
-    title: "CEO of Genesis",
-    image: "/gg.png",
-  },
-  {
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam minus vel itaque non quo et exercitationem! Beatae dolorum nam eum quibusdam, minus error, veritatis tempora illo consequatur repellat tempore." ,
-    name: "Ms Jane",
+    text: "Their creative problem-solving and technical expertise took our project to new heights. They delivered an intuitive, high-quality product that has received fantastic feedback from our users.",
+    name: "Ms. Jane",
     title: "CTO of Tech Corp",
     image: "vercel.svg",
   },
-  // Add more testimonials here
+  {
+    text: "I was impressed by their professionalism and depth of knowledge. The entire development process was smooth, and the final product is even better than I had envisioned. Truly an asset to any team.",
+    name: "Mr. Roger",
+    title: "CEO of Genesis",
+    image: "/gg.png",
+  },
+  {
+    text: "Collaborating with this developer has been a pleasure. They communicate effectively, meet all deadlines, and deliver exceptional code quality. I look forward to future projects together!",
+    name: "Ms. Jane",
+    title: "CTO of Tech Corp",
+    image: "vercel.svg",
+  },
 ];
 
 function Testimonials() {
