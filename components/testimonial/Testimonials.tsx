@@ -59,7 +59,7 @@ function Testimonials() {
     if (!isPaused) {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-      }, 2000); // Change testimonial every 5 seconds
+      }, 5000); // Change testimonial every 5 seconds
 
       return () => clearInterval(interval);
     }

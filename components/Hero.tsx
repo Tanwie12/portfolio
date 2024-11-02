@@ -30,7 +30,7 @@ const HeroSection = () => {
     
   ];
   return (
-    <section className="flex mt-10 flex-col w-full md:flex-row h-auto max-md:gap-7 justify-between md:h-[38rem] dark:text-white">
+    <section className="flex mt-10 max-md:mt-16 flex-col w-full md:flex-row h-auto max-md:gap-7 justify-between md:h-[38rem] dark:text-white">
       <div className=''>
         <h1 className="text-4xl font-bold mb-4">
           {"I'M"} <span className="text-customYellow">Tanwie Bruno</span>

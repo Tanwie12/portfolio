@@ -27,7 +27,7 @@ function Navbar({}: Props) {
     },
   ];
   return (
-    <div>
+    <div className='max-md:'>
        <FloatingNav navItems={navItems}/>
       
     </div>
