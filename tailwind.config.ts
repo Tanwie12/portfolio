@@ -32,7 +32,7 @@ const config = {
         customYellow:'#FFC331',
         customDark:'#34353A',
         customLight:'blue',
-        primary:'#FFC331', 
+       
 
       },
       transitionTimingFunction: {

@@ -40,7 +40,7 @@ const HeroSection = () => {
 <div className='gap-2 max-md:grid max-md:grid-cols-2 space-x-5'>
 
          <Link  href={"#contact"} >
-        <Button radius='sm' variant='bordered' className=' text-customYellow bodyText border-customYellow'>
+        <Button radius='sm' variant='bordered' className=' text-customYellow dark:text-white bodyText border-customYellow dark:border-white'>
           Contact Me
         </Button>
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
           radius='sm' 
           color='primary' 
           variant='shadow' 
-          className='text-customYellow bodyText border-customYellow'
+          className=' bodyText border-customYellow'
           onClick={() => {
             // Create a link element
             const link = document.createElement('a');
