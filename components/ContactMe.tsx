@@ -124,18 +124,19 @@ function ContactMe({}: Props) {
             <span className='hidden md:block'>adeytanwie@gmail.com</span>
           </Button>
           <Button
-            startContent={<BsWhatsapp className='w-8 h-8 hidden md:block' />}
+            startContent={<BsWhatsapp className='w-8 h-8 max-md:w-5 max-md:h-5 ' />}
             className='bg-[#34353A] h-12 inline-flex items-center md:text-xl md:justify-around rounded-md box4 drop-shadow-md text-custom-yellow md:px-6 transition-colors focus:outline-none'
             onClick={openWhatsApp}
           >
-            +237650891839
+           <span className='md:hidden'>Whatsapp Me</span>
+           <span className='md:block hidden'>+237650891839</span>
           </Button>
         </div>
       </div>
 
       <div className='flex flex-row max-md:mt-8 justify-center gap-4'>
         <Button variant='light' isIconOnly onClick={() => window.open(socialLinks.twitter, '_blank')}>
-          <FaTwitter className='w-8 h-8 text-customYellow' />
+          <FaTwitter className='w-8 h-8 text-customYellow dark:text-white ' />
         </Button>
         <Button variant='light' isIconOnly onClick={() => window.open(socialLinks.instagram, '_blank')}>
           <FaInstagram className='w-8 h-8 text-pink-600' />

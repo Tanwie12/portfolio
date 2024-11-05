@@ -19,7 +19,6 @@ const config = {
         "2xl": "1400px",
       },
     },
-     theme: {
     extend: {
       fontFamily: {
         signature: ['agustina', 'sans-serif'],
@@ -30,15 +29,11 @@ const config = {
         xs: '375px',
       },
       colors: {
-        customYellow:'#FECD7A',
-        bg: 'var(--color-bg)',
-        'bg-secondary': 'var(--color-bg-secondary)',
-        accent: 'var(--color-accent)',
-        'accent-light': 'var(--color-accent-light)',
-        text: 'var(--color-text)',
-        'dark-1': 'var(--color-dark-1)',
-        'dark-2': 'var(--color-dark-2)',
-        'dark-3': 'var(--color-dark-3)',
+        customYellow:'#FFC331',
+        customDark:'#34353A',
+        customLight:'blue',
+        primary:'#FFC331', 
+
       },
       transitionTimingFunction: {
         'in-scroll': 'cubic-bezier(0.645, 0.045, 0.355, 1)',
@@ -52,7 +47,6 @@ const config = {
           'radial-gradient(525px at 50% 50%, var(--color-accent-torch), transparent 80%)',
       },
     },
-  },
   },
   plugins: [require("tailwindcss-animate"),nextui()],
 } satisfies Config
